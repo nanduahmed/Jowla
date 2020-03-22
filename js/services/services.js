@@ -66,24 +66,82 @@ app.service('gapiService', ['$q', function ($q) {
 			gapi.client.sheets.spreadsheets.get({
 				spreadsheetId: sheetId
 			}).then(function (response) {
-				var title = response.result.properties.title;
-				var firstSheet = response.result.sheets[0];
-				FIRST_SHEET_NAME = firstSheet.properties.title;
-				var users = firstSheet.protectedRanges[0].editors ?
-					firstSheet.protectedRanges[0].editors.users : [];
+				// var title = response.result.properties.title;
+				// var firstSheet = response.result.sheets[0];
+				// FIRST_SHEET_NAME = firstSheet.properties.title;
+				// var users = firstSheet.protectedRanges[0].editors ?
+				// 	firstSheet.protectedRanges[0].editors.users : [];
 
-				gapi.client.sheets.spreadsheets.values.get({
-					spreadsheetId: sheetId,
-					range: FIRST_SHEET_NAME + range,
-				}).then(function (response) {
-					deferred.resolve({
-						title: title,
-						users: users,
-						rows: response.result.values.filter(row => row.length > 5)
-					});
-				}, function (response) {
-					deferred.reject(response.result.error);
-				});
+				// gapi.client.sheets.spreadsheets.values.get({
+				// 	spreadsheetId: sheetId,
+				// 	range: FIRST_SHEET_NAME + range,
+				// }).then(function (response) {
+				// 	//Response Format
+				// 	// Array(9) [ "{\"addressMD5\":\"be5c803955f9fec9e67adc6aaf65007a\",\"addressLat\":37.763629,\"addressLng\":-121.55356799999998,\"visitHistory\":[],\"isVisiting\":{}}", "Mainul", "Islam", "1148 S Jacobs Dr", "Tracy", "CA", "95391", "", "Updated " ]
+				// 	deferred.resolve({
+				// 		title: title,
+				// 		users: users,
+				// 		rows: response.result.values.filter(row => row.length > 5)
+				// 	});
+				// }, function (response) {
+				// 	deferred.reject(response.result.error);
+				// });
+				//Response Format
+				// Array(9) [ "{\"addressMD5\":\"be5c803955f9fec9e67adc6aaf65007a\",\"addressLat\":37.763629,
+				//\"addressLng\":-121.55356799999998,\"visitHistory\":[],\"isVisiting\":{}}", 
+				//"Mainul", "Islam", "1148 S Jacobs Dr", "Tracy", "CA", "95391", "", "Updated " ]
+				// const items = {
+				// 	title: 'Nizaam',
+				// 	users: ['richmond.cutting@gmail.com'],
+				// 	rows : [{
+				// 		addressMD5 : 'be5c803955f9fec9e67adc6aaf65007a',
+				// 		addressLat: 37.763629,
+				// 		addressLng: -121.55356799999998, 
+				// 		visitHistory: [],
+				// 		isVisiting: {},
+				// 	}, 
+					// 'Nizaam',
+					// "Ahmed",
+					// "1148 S Jacobs Dr",
+					// "Tracy",
+					// "CA",
+					// "95391",
+					// "",
+					// "Updated "
+				// ]
+				// }
+
+				const rows = [
+					[
+					"",
+					'Nizaam',
+					"Ahmed",
+					"1148 S Jacobs Dr",
+					"Tracy",
+					"CA",
+					"95391",
+					"",
+					"Updated "],
+					[
+						"",
+						'Riz',
+						"Ahmed",
+						"1149 S Jacobs Dr",
+						"Tracy",
+						"CA",
+						"95391",
+						"",
+						"Updated "]
+				]
+
+				const people = {
+					title: 'Nizaam',
+					users: ['richmond.cutting@gmail.com'],
+					rows: rows
+				}
+				deferred.resolve(people);
+				
+
 			}, function (response) {
 				deferred.reject(response.result.error);
 			});

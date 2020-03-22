@@ -1,0 +1,13 @@
+https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/spreadsheets.readonly&response_type=code&access_type=offline&redirect_uri=http://localhost:3000/login/google/return&client_id=125259738471-s329fv2u4q1o4pcch7uq4nhutguvdfkd.apps.googleusercontent.com
+
+http://localhost:3000/login/google/return?code=4/xwG16qbfsODXGbzj3djEmoqjfKTsF0bNJ7tVnFYEhYtZwNcxvubTdcvsn-O3NvdIKKZ78Wy5EmHKlKQp5QTaaGE&scope=https://www.googleapis.com/auth/spreadsheets.readonly
+
+code = 4/xwG16qbfsODXGbzj3djEmoqjfKTsF0bNJ7tVnFYEhYtZwNcxvubTdcvsn-O3NvdIKKZ78Wy5EmHKlKQp5QTaaGE
+
+Without Offline 
+
+https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/spreadsheets.readonly&response_type=code&redirect_uri=http://localhost:3000/login/google/return&client_id=125259738471-s329fv2u4q1o4pcch7uq4nhutguvdfkd.apps.googleusercontent.com
+
+http://localhost:3000/login/google/return?code=4/xwEIiHt3v-PE-nX1deNe9Y7F25-2mQEkkN8IvZftvg0v_yfK3BA8P3M6PAGzMV-mIEq2Gv2PwKx3ZZpsJdKNxd4&scope=https://www.googleapis.com/auth/spreadsheets.readonly
+
+code = 4/xwEIiHt3v-PE-nX1deNe9Y7F25-2mQEkkN8IvZftvg0v_yfK3BA8P3M6PAGzMV-mIEq2Gv2PwKx3ZZpsJdKNxd4

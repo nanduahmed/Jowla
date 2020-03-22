@@ -1,0 +1,26 @@
+{
+  "name": "jowla",
+  "version": "1.0.0",
+  "description": "Jowla App ",
+  "main": "app.js ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "webpack-dev-server --port 3000",
+    "link": "http://localhost:3000/#/1Y5m4XtyLhvJPVCU4uU9Gg8pCnLchl0R9z0_8r_Q0b8g"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanduahmed/Jowla.git"
+  },
+  "keywords": [
+    "Jowla",
+    "Rehbar",
+    "Gasht"
+  ],
+  "author": "Obada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nanduahmed/Jowla/issues"
+  },
+  "homepage": "https://github.com/nanduahmed/Jowla#readme"
+}
